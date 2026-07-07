@@ -1,19 +1,19 @@
 class Vyges < Formula
   desc "Vyges — one CLI for the Vyges hardware-IP toolchain"
   homepage "https://vyges.com"
-  version "0.1.8"
+  version "0.1.9"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/vyges-tools/cli/releases/download/v0.1.8/vyges-aarch64-apple-darwin.tar.xz"
-    sha256 "eeaa2b25cd0718b2216341b23614c750d32bb7605fcce8027b45cc10637cd381"
+    url "https://github.com/vyges-tools/cli/releases/download/v0.1.9/vyges-aarch64-apple-darwin.tar.xz"
+    sha256 "695cea789b3ee59e01c5f40e8a13857f35141adee97caa88b1cf38b0a8a97fe3"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/vyges-tools/cli/releases/download/v0.1.8/vyges-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4562b9f346cc4022b99d1a1ba2e1297d04315682ee51896ddee5b970d1a23b4f"
+      url "https://github.com/vyges-tools/cli/releases/download/v0.1.9/vyges-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "02a44ac38f17924a6571542b8e8c081438abd17253c15b37d0f843f666d56a80"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vyges-tools/cli/releases/download/v0.1.8/vyges-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "bb2e1abba34b5e72f1eb1a93952186d57b0a9515dc08338f6871d690c7bff0a6"
+      url "https://github.com/vyges-tools/cli/releases/download/v0.1.9/vyges-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d8f38d41717fc80b9986b3b3c23f5263bda91cb77f4bfb03ae1bac802e59c1e1"
     end
   end
 

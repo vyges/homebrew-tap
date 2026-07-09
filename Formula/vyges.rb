@@ -1,19 +1,19 @@
 class Vyges < Formula
   desc "Vyges — one CLI for the Vyges hardware-IP toolchain"
   homepage "https://vyges.com"
-  version "0.1.9"
+  version "0.1.12"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/vyges-tools/cli/releases/download/v0.1.9/vyges-aarch64-apple-darwin.tar.xz"
-    sha256 "695cea789b3ee59e01c5f40e8a13857f35141adee97caa88b1cf38b0a8a97fe3"
+    url "https://github.com/vyges-tools/cli/releases/download/v0.1.12/vyges-aarch64-apple-darwin.tar.xz"
+    sha256 "002c75c52a24bbefd86aa51ce8af8e6b94a114b1a9604a75f88a7a3a76d3336f"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/vyges-tools/cli/releases/download/v0.1.9/vyges-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "02a44ac38f17924a6571542b8e8c081438abd17253c15b37d0f843f666d56a80"
+      url "https://github.com/vyges-tools/cli/releases/download/v0.1.12/vyges-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "75b54f2c3270e032e70a8d6cf49d09ff2fdb806a4a2fadc1919147ca1a332723"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vyges-tools/cli/releases/download/v0.1.9/vyges-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d8f38d41717fc80b9986b3b3c23f5263bda91cb77f4bfb03ae1bac802e59c1e1"
+      url "https://github.com/vyges-tools/cli/releases/download/v0.1.12/vyges-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "16f4e512c52da0e714e715b1313319963968eda87bae2ef609d826894eb1cf40"
     end
   end
 
@@ -41,13 +41,13 @@ class Vyges < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "vyges", "vyges-catalog", "vyges-mcp", "vyges-metadata", "vyges-pdk-store"
+      bin.install "vyges", "vyges-catalog", "vyges-mcp", "vyges-metadata", "vyges-model", "vyges-pdk-store"
     end
     if OS.linux? && Hardware::CPU.arm?
-      bin.install "vyges", "vyges-catalog", "vyges-mcp", "vyges-metadata", "vyges-pdk-store"
+      bin.install "vyges", "vyges-catalog", "vyges-mcp", "vyges-metadata", "vyges-model", "vyges-pdk-store"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "vyges", "vyges-catalog", "vyges-mcp", "vyges-metadata", "vyges-pdk-store"
+      bin.install "vyges", "vyges-catalog", "vyges-mcp", "vyges-metadata", "vyges-model", "vyges-pdk-store"
     end
 
     install_binary_aliases!
